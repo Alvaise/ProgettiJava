@@ -6,4 +6,5 @@ import com.spadea.entities.Intervento;
 
 public interface InterventoDAO extends JpaRepository<Intervento, Integer> {
 
+	
 }

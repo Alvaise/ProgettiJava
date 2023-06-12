@@ -5,12 +5,13 @@ import java.util.Optional;
 
 import com.spadea.entities.Cantiere;
 import com.spadea.entities.Intervento;
+import com.spadea.entities.TabellaInterventi;
 
 public interface ServiceDer {
 
 	List<Cantiere> getCantieri();
 	List<Intervento> getInterventi();
-	Optional<Intervento> getInterventiByCantiereId(int id);
 	Intervento addIntervento(Intervento i);
 	Cantiere addCantiere(Cantiere c);
+	List<TabellaInterventi> getTabella();
 }

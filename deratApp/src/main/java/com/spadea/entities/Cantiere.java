@@ -20,8 +20,6 @@ public class Cantiere {
 	private String nomeAzienda;
 	private String indirizzo;
 	
-//	@OneToMany
-//	private List<Intervento> interventi;
 
 	public String getIndirizzo() {
 		return indirizzo;

@@ -2,6 +2,8 @@ package com.spadea.repos;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TabellaInterventiDAO extends JpaRepository<TabellaInterventiDAO, Integer> {
+import com.spadea.entities.TabellaInterventi;
+
+public interface TabellaInterventiDAO extends JpaRepository<TabellaInterventi, Integer> {
 
 }

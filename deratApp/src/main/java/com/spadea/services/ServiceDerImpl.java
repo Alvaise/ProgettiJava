@@ -8,8 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.spadea.entities.Cantiere;
 import com.spadea.entities.Intervento;
+import com.spadea.entities.TabellaInterventi;
 import com.spadea.repos.CantiereDAO;
 import com.spadea.repos.InterventoDAO;
+import com.spadea.repos.TabellaInterventiDAO;
 
 @Service
 public class ServiceDerImpl implements ServiceDer {
@@ -18,6 +20,8 @@ public class ServiceDerImpl implements ServiceDer {
 	private CantiereDAO cantiereDao;
 	@Autowired
 	private InterventoDAO interventoDao;
+	@Autowired
+	private TabellaInterventiDAO tabDao;
 	
 	@Override
 	public List<Cantiere> getCantieri() {
@@ -30,15 +34,7 @@ public class ServiceDerImpl implements ServiceDer {
 	}
 
 	@Override
-	public Optional<Intervento> getInterventiByCantiereId(int id) {
-		// TODO Auto-generated method stub
-		return interventoDao.findById(id);
-	}
-
-
-	@Override
 	public Intervento addIntervento(Intervento i) {
-		// TODO Auto-generated method stub
 		return interventoDao.save(i);
 	}
 
@@ -46,5 +42,12 @@ public class ServiceDerImpl implements ServiceDer {
 	public Cantiere addCantiere(Cantiere c) {
 		return cantiereDao.save(c);
 	}
+
+	@Override
+	public List<TabellaInterventi> getTabella() {
+		// TODO Auto-generated method stub
+		return tabDao.findAll();
+	}
+
 
 }

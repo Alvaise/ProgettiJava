@@ -1,6 +1,7 @@
 package com.spadea.entities;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +22,8 @@ public class Intervento {
 	private LocalDate dataIntervento;
 	@ManyToOne
 	private Cantiere cantiere;
+	@OneToMany
+	private List<TabellaInterventi> tabella;
 	
 	public Cantiere getCantiere() {
 		return cantiere;
@@ -40,4 +43,11 @@ public class Intervento {
 	public void setDataIntervento(LocalDate dataIntervento) {
 		this.dataIntervento = dataIntervento;
 	}
+	public List<TabellaInterventi> getTabella() {
+		return tabella;
+	}
+	public void setTabella(List<TabellaInterventi> tabella) {
+		this.tabella = tabella;
+	}
+	
 }
